@@ -100,7 +100,6 @@ class Contra(Module):
                  projection_size,
                  projection_hidden_size,
                  n_cluster,
-                 n_node,
                  v=1):
         super().__init__()
 
