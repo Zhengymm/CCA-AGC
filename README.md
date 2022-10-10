@@ -1,5 +1,5 @@
 # CCA-AGC
-Implementation for CCA-AGC model.
+Implementation for CCA-AGC model (A Contrastive Learning Method with Cluster-preserving Augmentation for Attributed Graph Clustering).
 
 # Implementation
 pretrain.py: pretrain multilevel contrast to get initial parameters and node representations.
