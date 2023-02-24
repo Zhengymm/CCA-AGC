@@ -6,7 +6,7 @@ pretrain.py: pretrain multilevel contrast to get initial parameters and node rep
 
 train_conclu.py: jointly train the whole model.
 
-
+# Parameters Setting
 |    Dataset   | Encoding dimension | Projecting dimension | Activation Function | Learning rate | kNN |  p_e | p_m | Epoch |  T  |
 |:------------:|:------------------:|:--------------------:|:-------------------:|:-------------:|:---:|:----:|:---:|:-----:|:---:|
 |     Cora     |       512-256      |         1024         |         ReLu        |     0.0001    |  0  | 0.85 | 0.1 |  200  |  1  |
