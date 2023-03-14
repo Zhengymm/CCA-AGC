@@ -14,7 +14,7 @@ def cluster_acc(y_true, y_pred):
     l2 = list(set(y_pred))
     numclass2 = len(l2)
     """    
-    # tmp = dict(Counter(y_pred))   # ## 对y_pred中元素计数
+    # tmp = dict(Counter(y_pred))
     ind = 0
     if numclass1 != numclass2:
         for i in l1:
