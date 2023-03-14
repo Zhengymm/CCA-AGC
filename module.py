@@ -47,11 +47,10 @@ def contrastive_cross_view(h1, h2, temperature=1):
     z2 = F.normalize(h2, dim=-1, p=2)
     f = lambda x: torch.exp(x / temperature)
     intra_sim = f(torch.mm(z1, z1.t()))
-    inter_sim = f(torch.mm(z1, z2.t()))  # 视图间同一节点做正样本
+    inter_sim = f(torch.mm(z1, z2.t()))
 
     # loss = -torch.log(inter_sim.diag() / (intra_sim.sum(dim=-1) + inter_sim.sum(dim=-1) - intra_sim.diag()))
 
-    # 改变pos_mask, 以利用伪标签进行约束
     pos_mask = torch.eye(z1.size(0), dtype=torch.float32).to(z1.device)
 
     neg_mask = 1 - pos_mask
