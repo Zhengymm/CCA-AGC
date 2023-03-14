@@ -69,7 +69,6 @@ def aug_feature_dropout(input_feat, drop_percent=0.2):
 
 # GRACE drop feature
 def drop_feature(x, drop_prob):
-    # 使节点的某一维度为0
     drop_mask = torch.empty(
         (x.size(1), ),
         dtype=torch.float32,
